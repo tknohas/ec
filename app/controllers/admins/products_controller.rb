@@ -1,7 +1,7 @@
 class Admins::ProductsController < Admins::ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
   def index
-    @products = Product.default_order
+    @products = Product.default_order.page params[:page]
   end
 
   def show
