@@ -7,4 +7,12 @@ class Product < ApplicationRecord
   validates :position, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   scope :default_order, -> { order(:position) }
+
+  def publish!
+    update!(published_at: Time.current)
+  end
+
+  def unpublish!
+    update!(published_at: nil)
+  end
 end
