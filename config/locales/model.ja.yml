@@ -1,0 +1,38 @@
+ja:
+  activerecord:
+    models:
+      product: '商品'
+    attributes:
+      product:
+        price: '価格'
+        name: '商品名'
+        description: '商品説明'
+        is_private: '非公開にする'
+        image: '商品画像'
+        sort_position: '表示順'
+      address:
+        postal_code: '郵便番号'
+        prefecture: '都道府県'
+        city: '市区町村'
+        street: 'それ以降の住所'
+        building: '建物名/会社名・部屋番号'
+      purchase:
+        delivery_date: '配達日'
+        delivery_time: '配達時間'
+      cart_item:
+        quantity: '数量'
+      diary:
+        title: 'タイトル'
+        content: '投稿内容'
+      comment:
+        content: 'コメント内容'
+      coupon:
+        code: 'クーポンコード'
+        point: 'ポイント'
+        expires_at: '有効期限'
+      point_activity:
+        point_change: '追加ポイント'
+        description: '適用理由'
+        expires_at: '有効期限'
+      stock:
+        quantity: '在庫数'
