@@ -36,3 +36,17 @@ ja:
         expires_at: '有効期限'
       stock:
         quantity: '在庫数'
+  number:
+      currency:
+        format:
+          unit: "円"
+          format: "%n%u"
+          delimiter: ","
+          precision: 0
+  views:
+    pagination:
+      previous: "前へ"
+      next: "次へ"
+      truncate: "..."
+      last: "最後へ"
+      first: "最初へ"
