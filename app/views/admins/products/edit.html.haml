@@ -1,0 +1,5 @@
+%h1.text-3xl.font-bold.mb-4.text-center 商品編集
+= render 'admins/products/form', product: @product, button: '変更'
+.div{ 'class' => 'w-9/12' }
+  .flex.justify-end.mt-4
+    = delete_button(admins_product_path(@product))

@@ -22,6 +22,8 @@ gem "simple_form"
 gem "devise"
 gem "haml-rails"
 gem "html2haml"
+gem "acts_as_list"
+gem "kaminari"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"

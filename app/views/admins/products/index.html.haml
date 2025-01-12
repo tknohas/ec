@@ -1,0 +1,18 @@
+%h1.text-3xl.font-bold.mb-4.text-center 商品一覧(管理画面)
+
+.flex.justify-between
+  %div
+    = link_to '商品登録画面', new_admins_product_path,
+      class: 'ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'
+
+.product-container.mx-8.grid.grid-cols-3.gap-4.mb-4.mt-4
+  - @products.each do |product|
+    .border-4.flex.justify-center
+      .product-item.w-100.mx-auto
+        = link_to admins_product_path(product) do
+          -# = render 'shared/product_image', product: product, size: '330x219', variant: :middle
+          %p.product-name.mt-2.font-bold.text-center= product.name
+          %p.product-name.mt-2.font-bold.text-center= number_to_currency(product.price)
+          = link_to '編集', edit_admins_product_path(product),
+            class: 'bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
+= paginate @products
