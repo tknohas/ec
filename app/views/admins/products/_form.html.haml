@@ -1,6 +1,6 @@
 %div{"class" => "container flex justify-center"}
   %div{"class" => "w-2/5 mx-auto"}
-    = simple_form_for [:admins, product], html: { class: 'space-y-6' } do |f|
+    = simple_form_for [ :admins, product ], html: { class: 'space-y-6' } do |f|
       = render 'admins/shared/error_messages', object: product
 
       .form-inputs.space-y-4
